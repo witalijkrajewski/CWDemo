@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="app.js"></script>
+    <title>Control Work Demo</title>
+</head>
+<body>
+<form action="handler.php">
+    <label for="name">ФИО</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="birthdate">Дато рождения</label>
+    <input type="date" id="birthdate" name="birthdate" required>
+
+    <label for="delivery">Способ доставки</label>
+    <select id="delivery" name="delivery" required>
+        <option value="">Выберите способ доставки</option>
+        <option value="pickup">Самовывоз</option>
+        <option value="courier">Курьерская доставка</option>
+        <option value="post">Почтовая доставка</option>
+        <option value="express">Экспресс-доставка</option>
+    </select>
+
+    <label>Выберите подарки (не более 2)</label>
+<!--    <select id="gifts" name="gifts[]" multiple required>-->
+<!--        <option value="chocolate">Шоколад</option>-->
+<!--        <option value="flowers">Цветы</option>-->
+<!--        <option value="wine">Вино</option>-->
+<!--        <option value="teddy">Мягкая игрушка</option>-->
+<!--        <option value="perfume">Духи</option>-->
+<!--    </select>-->
+    <label class="checkbox-label">
+        <input type="checkbox" name="gifts[]" value="Phone">
+        Телефон
+    </label>
+
+    <label class="checkbox-label">
+        <input type="checkbox" name="gifts[]" value="Flowers">
+        Цветы
+    </label>
+
+    <label class="checkbox-label">
+        <input type="checkbox" name="gifts[]" value="Laptop">
+        Ноутбук
+    </label>
+
+    <label class="checkbox-label">
+        <input type="checkbox" name="gifts[]" value="Teddy">
+        Мягкая игрушка
+    </label>
+
+    <label class="checkbox-label">
+        <input type="checkbox" name="gifts[]" value="Perfume">
+        Духи
+    </label>
+
+    <button type="submit" onclick=" return validateForm()">Оформить заказ</button>
+    <button type="reset">Очистить поля</button>
+</form>
+</body>
+</html>
