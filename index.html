@@ -10,49 +10,49 @@
     <title>Control Work Demo</title>
 </head>
 <body>
-<form action="handler.php" name="form">
-    <label for="name">ФИО</label>
-    <input type="text" id="name" name="name" required>
+<form action="handler.php" method="POST">
+    <label>ФИО</label>
+    <input type="text" name="fullname" required>
 
-    <label for="birthdate">Дато рождения</label>
-    <input type="date" id="birthdate" name="birthdate" required>
+    <label>Дата рождения</label>
+    <input type="date" name="birthday" required>
 
     <label for="delivery">Способ доставки</label>
     <select id="delivery" name="delivery" required>
         <option value="">Выберите способ доставки</option>
-        <option value="pickup">Самовывоз</option>
-        <option value="courier">Курьерская доставка</option>
-        <option value="post">Почтовая доставка</option>
-        <option value="express">Экспресс-доставка</option>
+        <option value="Самовывоз">Самовывоз</option>
+        <option value="Курьерская доставка">Курьерская доставка</option>
+        <option value="Почтовая доставка">Почтовая доставка</option>
+        <option value="Экспресс-доставка">Экспресс-доставка</option>
     </select>
 
     <label>Выберите подарки (не более 2)</label>
     <label class="checkbox-label">
-        <input type="checkbox" name="gifts[]" value="Phone">
+        <input type="checkbox" name="gifts[]" value="Телефон">
         Телефон
     </label>
 
     <label class="checkbox-label">
-        <input type="checkbox" name="gifts[]" value="Flowers">
+        <input type="checkbox" name="gifts[]" value="Цветы">
         Цветы
     </label>
 
     <label class="checkbox-label">
-        <input type="checkbox" name="gifts[]" value="Laptop">
+        <input type="checkbox" name="gifts[]" value="Ноутбук">
         Ноутбук
     </label>
 
     <label class="checkbox-label">
-        <input type="checkbox" name="gifts[]" value="Teddy">
+        <input type="checkbox" name="gifts[]" value="Мягкая игрушка">
         Мягкая игрушка
     </label>
 
     <label class="checkbox-label">
-        <input type="checkbox" name="gifts[]" value="Perfume">
+        <input type="checkbox" name="gifts[]" value="Духи">
         Духи
     </label>
 
-    <button type="submit" onclick=" return validateCheckboxes()">Оформить заказ</button>
+    <button type="submit" onclick="return validateCheckboxes()">Оформить заказ</button>
     <button type="reset">Очистить поля</button>
 </form>
 </body>

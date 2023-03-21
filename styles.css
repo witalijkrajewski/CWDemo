@@ -16,7 +16,7 @@ input, select {
     border-radius: 4px;
 }
 
-button[type="submit"]{
+button[type="submit"] {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -36,7 +36,7 @@ button[type="reset"] {
     font-size: 16px;
 }
 
-button[type="submit"]:hover{
+button[type="submit"]:hover {
     background-color: #3e8e41;
 }
 
@@ -46,4 +46,9 @@ button[type="reset"]:hover {
 
 input.error {
     border-color: red;
+}
+
+table, tr, td, th {
+    border: 2px solid black;
+    border-collapse: collapse;
 }

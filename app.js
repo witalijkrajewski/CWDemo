@@ -8,7 +8,7 @@ function validateCheckboxes() {
         return false
     }
 
-    const nameInput = document.querySelector("#name")
+    const nameInput = document.querySelector("#fullname")
     if (nameInput.value.trim() === "") {
         nameInput.classList.add("error")
     }
