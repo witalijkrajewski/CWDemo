@@ -43,3 +43,7 @@ button[type="submit"]:hover{
 button[type="reset"]:hover {
     background-color: #9c0000;
 }
+
+input.error {
+    border-color: red;
+}

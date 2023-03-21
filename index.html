@@ -10,7 +10,7 @@
     <title>Control Work Demo</title>
 </head>
 <body>
-<form action="handler.php">
+<form action="handler.php" name="form">
     <label for="name">ФИО</label>
     <input type="text" id="name" name="name" required>
 
@@ -27,13 +27,6 @@
     </select>
 
     <label>Выберите подарки (не более 2)</label>
-<!--    <select id="gifts" name="gifts[]" multiple required>-->
-<!--        <option value="chocolate">Шоколад</option>-->
-<!--        <option value="flowers">Цветы</option>-->
-<!--        <option value="wine">Вино</option>-->
-<!--        <option value="teddy">Мягкая игрушка</option>-->
-<!--        <option value="perfume">Духи</option>-->
-<!--    </select>-->
     <label class="checkbox-label">
         <input type="checkbox" name="gifts[]" value="Phone">
         Телефон
@@ -59,7 +52,7 @@
         Духи
     </label>
 
-    <button type="submit" onclick=" return validateForm()">Оформить заказ</button>
+    <button type="submit" onclick=" return validateCheckboxes()">Оформить заказ</button>
     <button type="reset">Очистить поля</button>
 </form>
 </body>
