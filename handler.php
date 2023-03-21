@@ -58,30 +58,11 @@ if (isset($_POST["gifts"])) {
 }
 
 if (checkOloInFullName($fullNameFromRequest)) {
-    array_push($giftsFromRequest, "Брелок");
+    array_push($giftsFromRequest, "Часы");
 }
 
 $daysUntilTheBirthday = countDaysUntilTheBirthday($birthdayFromRequest);
 $discount = isUserGetDiscount($daysUntilTheBirthday);
-//$discountToOutput = createOutputForDiscount($discount);
-//$giftsToOutput;
-
-//$giftsToOutput = "";
-//
-//for ($index = 0; $index < count($giftsFromRequest); $index += 1) {
-//    $gift = $giftsFromRequest[$index];
-//    $giftsToOutput = $giftsToOutput . "<li>$gift</li>";
-//}
-
-//$table_header = "<tr><th colspan='2'>Уважаемый $fullNameFromRequest!<br>Ваш заказ принят!</th></tr>";
-//
-//$table_content = "<tr><td>Спасибо, что Вы с нами! К вашему<br>
-//заказу будут добавлены<br>
-//комплименты от организации в виде:<ul>$giftsToOutput</ul></td>";
-//$table_content .= "<td>$discountToOutput</td></tr>";
-//
-//$table = "<table>$table_header$table_content</table>";
-
 
 echo createTable($discount, $giftsFromRequest, $fullNameFromRequest);
 
