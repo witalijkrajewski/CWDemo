@@ -1,4 +1,4 @@
-function validateCheckboxes() {
+function validateData() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked')
     if (checkboxes.length > 2) {
         alert('Вы выбрали больше двух подарков!')
